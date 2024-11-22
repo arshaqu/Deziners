@@ -1,216 +1,292 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import Image1 from '../Assets/charcoal.jpg'
 import Adhams from '../Assets/adams1.png'
-import charcoal1 from '../Assets/charcole/charcoal2.jpg'
-import charcoal3 from '../Assets/charcole/charcoal3.jpg'
-import charcoal4 from '../Assets/charcole/charcoal4.jpg'
-import charcoal5 from '../Assets/charcole/charcoal5.jpg'
-import charcoal6 from '../Assets/charcole/charcoal6.jpg'
-import charcoal7 from '../Assets/charcole/charcoal7.jpg'
-import charcoal8 from '../Assets/charcole/charcoal8.jpg'
-import charcoal9 from '../Assets/charcole/charcoal9.jpg'
-import charcoal10 from '../Assets/charcole/charcoal10.jpg'
-import charcoal11 from '../Assets/charcole/charcoal11.jpg'
-import charcoal12 from '../Assets/charcole/charcoal12.jpg'
-import charcoal13 from '../Assets/charcole/charcoal13.jpg'
-import charcoal14 from '../Assets/charcole/charcoal14.jpg'
-import charcole12cm4 from '../Assets/charcole/12cm/charcole12cm4.jpg'
-import charcole12cm5 from '../Assets/charcole/12cm/charcole12cm5.jpg'
-import charcole12cm6 from '../Assets/charcole/12cm/charcole12cm6.jpg'
-import charcole12cm7 from '../Assets/charcole/12cm/charcole12cm7.jpg'
-import charcole12cm8 from '../Assets/charcole/12cm/charcole12cm8.jpg'
-import charcole12cm9 from '../Assets/charcole/12cm/charcole12cm9.jpg'
-import charcole12cm10 from '../Assets/charcole/12cm/charcole12cm10.jpg'
-import charcole12cm11 from '../Assets/charcole/12cm/charcole12cm11.jpg'
-import charcole12cm12 from '../Assets/charcole/12cm/charcole12cm12.jpg'
-import charcole12cm13 from '../Assets/charcole/12cm/charcole12cm13.jpg'
+
+import charcole12cm4_1 from '../Assets/charcole/12cm/charcole12cm4.1.jpg'
+import charcole12cm4_2 from '../Assets/charcole/12cm/charcole12cm4.2.jpg'
+import charcole12cm5_1 from '../Assets/charcole/12cm/charcole12cm5.1.jpg'
+import charcole12cm5_2 from '../Assets/charcole/12cm/charcole12cm5.2.jpg'
+import charcole12cm6_1 from '../Assets/charcole/12cm/charcole12cm6.1.jpg'
+import charcole12cm7_1 from '../Assets/charcole/12cm/charcole12cm7.1.jpg'
+import charcole12cm7_2 from '../Assets/charcole/12cm/charcole12cm7.1.jpg'
+import charcole12cm8_1 from '../Assets/charcole/12cm/charcole12cm8.1.jpg'
+import charcole12cm8_2 from '../Assets/charcole/12cm/charcole12cm8.2.jpg'
+import charcole12cm9_1 from '../Assets/charcole/12cm/charcole12cm9.1.jpg'
+import charcole12cm9_2 from '../Assets/charcole/12cm/charcole12cm9.2.jpg'
+import charcole12cm9_3 from '../Assets/charcole/12cm/charcole12cm9.3.jpg'
+import charcole12cm10_1 from '../Assets/charcole/12cm/charcole12cm10.1.jpg'
+import charcole12cm10_2 from '../Assets/charcole/12cm/charcole12cm10.2.jpg'
+import charcole12cm10_3 from '../Assets/charcole/12cm/charcole12cm10.3.jpg'
+import charcole12cm11_1 from '../Assets/charcole/12cm/charcole12cm11.1.jpg'
+import charcole12cm11_2 from '../Assets/charcole/12cm/charcole12cm11.2.jpg'
+import charcole12cm11_3 from '../Assets/charcole/12cm/charcole12cm11.3.jpg'
+import charcole12cm12_1 from '../Assets/charcole/12cm/charcole12cm12.1.jpg'
+import charcole12cm12_2 from '../Assets/charcole/12cm/charcole12cm12.2.jpg'
+import charcole12cm13_1 from '../Assets/charcole/12cm/charcole12cm13.1.jpg'
+import charcole12cm13_2 from '../Assets/charcole/12cm/charcole12cm13.2.jpg'
+import charcole12cm14_1 from '../Assets/charcole/12cm/charcole12cm14.1.jpg'
+import charcole12cm14_2 from '../Assets/charcole/12cm/charcole12cm14.2.jpg'
+import charcole12cm14_3 from '../Assets/charcole/12cm/charcole12cm14.3.jpg'
+import charcole12cm15_1 from '../Assets/charcole/12cm/charcole12cm15.1.jpg'
+import charcole12cm15_2 from '../Assets/charcole/12cm/charcole12cm15.2.jpg'
+import charcole12cm15_3 from '../Assets/charcole/12cm/charcole12cm15.3.jpg'
+import charcole12cm16_1 from '../Assets/charcole/12cm/charcole12cm16.1.jpg'
+import charcole12cm16_2 from '../Assets/charcole/12cm/charcole12cm16.2.jpg'
+
+
+import charcole16cm1_1 from '../Assets/charcole/12cm/charcole16cm1.1.jpg'
+import charcole16cm2_1 from '../Assets/charcole/12cm/charcole16cm2.2.jpg'
+import charcole16cm2_2 from '../Assets/charcole/12cm/charcole16cm2.2.jpg'
 import charcole16cm1 from '../Assets/charcole/12cm/charcole16cm1.jpg'
-import charcole16cm2 from '../Assets/charcole/12cm/charcole16cm2.jpg'
-import charcole16cm3 from '../Assets/charcole/12cm/charcole16cm3.jpg'
+import charcole16cm3_1 from '../Assets/charcole/12cm/charcole16cm3.1.jpg'
+import charcole16cm3_2 from '../Assets/charcole/12cm/charcole16cm3.2.jpg'
+import charcole16cm3_3 from '../Assets/charcole/12cm/charcole16cm3.3.jpg'
+import charcole16cm4_1 from '../Assets/charcole/12cm/charcole16cm4.1.jpg'
+import charcole16cm4_2 from '../Assets/charcole/12cm/charcole16cm4.2.jpg'
+import charcole16cm4_3 from '../Assets/charcole/12cm/charcole16cm4.3.jpg'
+
+
+import charcole30cm1 from '../Assets/charcole/12cm/charcole30cm1.jpg'
+import charcole30cm2 from '../Assets/charcole/12cm/charcole30cm2.jpg'
+import charcole30cm3 from '../Assets/charcole/12cm/charcole30cm3.jpg'
+import charcole30cm4 from '../Assets/charcole/12cm/charcole30cm4.jpg'
+import charcole30cm5 from '../Assets/charcole/12cm/charcole30cm5.jpg'
+import charcole30cm6 from '../Assets/charcole/12cm/charcole30cm6.jpg'
+import charcole30cm7 from '../Assets/charcole/12cm/charcole30cm7.jpg'
+import charcole30cm8 from '../Assets/charcole/12cm/charcole30cm8.jpg'
+import charcole30cm9 from '../Assets/charcole/12cm/charcole30cm9.jpg'
+import charcole30cm10 from '../Assets/charcole/12cm/charcole30cm10.jpg'
+import charcole30cm11 from '../Assets/charcole/12cm/charcole30cm11.jpg'
+import charcole30cm12 from '../Assets/charcole/12cm/charcole30cm12.jpg'
+import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
 
 
 
 
 
-function Charcoal() {
 
-    const categories = [
-        'WOOD GRAINS',
-        'MARBLE TEXTURE',
-        'SOLID COLOURS',
-        'ACCESSORIES'
-      ];
 
-      useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+
+
+
+
+
+      const ImageZoomModal = ({ image, alt, productName, isOpen, onClose }) => {
+        if (!isOpen) return null;
     
+        return (
+            <div
+                className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+                onClick={onClose}
+            >
+                <div className="relative w-full max-w-2xl bg-gray-100 rounded-lg shadow-lg p-6">
+                    <button
+                        onClick={onClose}
+                        className="absolute top-4 right-4 text-black bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 transition-opacity"
+                    >
+                        ×
+                    </button>
+                    <img
+                        src={image}
+                        alt={alt}
+                        className="w-full h-auto max-h-[75vh] object-contain rounded-md border-4 border-gray-400 mb-4"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                    <div className="text-center text-lg font-semibold text-gray-700">
+                        {productName}
+                    </div>
+                </div>
+            </div>
+        );
+    };
+    
+    function Charcoal() {
 
+      
+        const [selectedImage, setSelectedImage] = useState(null);
+    
+       
 
       const productSections = [
         {
           size: "12cm X 23 mm X 2.5 m (4 × 3)",
           products: [
-            { id: "ADS34FJ", image: charcoal1 },
-            { id: "ADS34FJ", image: charcole12cm4 },
-            { id: "ADS34FJ", image: charcole12cm5 },
-            { id: "ADS34FJ", image: charcole12cm6 },
-            { id: "ADS34FJ", image: charcole12cm7 },
-            { id: "ADS34FJ", image: charcole12cm8 },
-            { id: "ADS34FJ", image: charcole12cm9 },
-            { id: "ADS34FJ", image: charcole12cm10 },
-            { id: "ADS34FJ", image: charcole12cm11 },
-            { id: "ADS34FJ", image: charcole12cm12 },
-            { id: "ADS34FJ", image: charcole12cm13 },
+            { id: "AD B_5", image: charcole12cm4_2 },
+            { id: "AD B-9", image: charcole12cm4_1 },
+
+            { id: "AD 308-9", image: charcole12cm5_1 },
+            { id: "AD 308A-11", image: charcole12cm5_2 },
+            { id: "ADS34FJ", image: charcole12cm6_1 },
+            { id: "ADS34FJ", image: charcole12cm7_1 },
+            { id: "ADS34FJ", image: charcole12cm7_2 },
+            { id: "ADS34FJ", image: charcole12cm8_1 },
+            { id: "ADS34FJ", image: charcole12cm8_2 },
+            { id: "ADS34FJ", image: charcole12cm9_1 },
+            { id: "ADS34FJ", image: charcole12cm9_2 },
+            { id: "ADS34FJ", image: charcole12cm9_3 },
+            { id: "ADS34FJ", image: charcole12cm10_1 },
+            { id: "ADS34FJ", image: charcole12cm10_2 },
+            { id: "ADS34FJ", image: charcole12cm10_3 },
+            { id: "ADS34FJ", image: charcole12cm11_1 },
+            { id: "ADS34FJ", image: charcole12cm11_2 },
+            { id: "ADS34FJ", image: charcole12cm11_3 },
+            { id: "ADS34FJ", image: charcole12cm12_1 },
+            { id: "ADS34FJ", image: charcole12cm12_2 },
+            { id: "ADS34FJ", image: charcole12cm13_1 },
+            { id: "ADS34FJ", image: charcole12cm13_2 },
+            { id: "ADS34FJ", image: charcole12cm14_1 },
+            { id: "ADS34FJ", image: charcole12cm14_2 },
+            { id: "ADS34FJ", image: charcole12cm14_3 },
+            { id: "ADS34FJ", image: charcole12cm15_1 },
+            { id: "ADS34FJ", image: charcole12cm15_2 },
+            { id: "ADS34FJ", image: charcole12cm15_3 },
+            { id: "ADS34FJ", image: charcole12cm16_1 },
+            { id: "ADS34FJ", image: charcole12cm16_2 },
+
+
+            
+
+
+
+
           ]
         },
         {
           size: "16cm X 8 mm X 3.5 m (4 × 3)",
           products: [
+            { id: "ADS34FJ", image: charcole16cm1_1 },
+            { id: "ADS34FJ", image: charcole16cm2_1 },
+            { id: "ADS34FJ", image: charcole16cm2_2 },
             { id: "ADS34FJ", image: charcole16cm1 },
-            { id: "ADS34FJ", image: charcole16cm2 },
-            { id: "ADS34FJ", image: charcole16cm3 },
-            { id: "ADS34FJ", image: charcole16cm1 },
+            
+            { id: "ADS34FJ", image: charcole16cm3_1 },
+            { id: "ADS34FJ", image: charcole16cm3_2 },
+            { id: "ADS34FJ", image: charcole16cm3_3 },
+            { id: "ADS34FJ", image: charcole16cm4_1 },
+            { id: "ADS34FJ", image: charcole16cm4_2 },
+            { id: "ADS34FJ", image: charcole16cm4_3 },
+
+            
           ]
         },
         {
           size: "30cm X 5 mm X 2.9 m (4 × 3)",
           products: [
-            { id: "ADS34FJ", image: charcoal1 },
-            { id: "ADS34FJ", image: charcoal3 },
-            { id: "ADS34FJ", image: charcoal4 },
-            { id: "ADS34FJ", image: charcoal5 },
-            { id: "ADS34FJ", image: charcoal6 },
-            { id: "ADS34FJ", image: charcoal7 },
-            { id: "ADS34FJ", image: charcoal8 },
-            { id: "ADS34FJ", image: charcoal9 },
-            { id: "ADS34FJ", image: charcoal10 },
-            { id: "ADS34FJ", image: charcoal11 },
-            { id: "ADS34FJ", image: charcoal12 },
-            { id: "ADS34FJ", image: charcoal13 },
-            { id: "ADS34FJ", image: charcoal14 },
+            { id: "AD PS 8021", image: charcole30cm1 },
+            { id: "AD PS 8018", image: charcole30cm2 },
+            { id: "AD PS 8019", image: charcole30cm3 },
+            { id: "AD PS 8020", image: charcole30cm4 },
+            { id: "AD PS 8023", image: charcole30cm5 },
+            { id: "AD PS 8029", image: charcole30cm6 },
+            { id: "AD PS 8022", image: charcole30cm7 },
+            { id: "AD PS 8027", image: charcole30cm8 },
+            { id: "AD PS 8028", image: charcole30cm9 },
+            { id: "AD PS 8026", image: charcole30cm10 },
+            { id: "AD PS 8025", image: charcole30cm11 },
+            { id: "AD 30-2", image: charcole30cm12 },
+            { id: "AD 30 SY-2", image: charcole30cm13 },
 
 
           ]
         }
       ];
-
-
-    return (
-        <div className="min-h-screen bg-neutral-100">
-            <Navbar/>
-        
-          <div className="relative mb-12">
-      <img 
-        src={Image1} 
-        alt="Luxury interior wall covering"
-        className="w-full h-[80vh] object-cover"
-      />
-      <div className="absolute bottom-6 left-8">
-        <img 
-          src={Adhams} 
-          alt="Adhams logo" 
-          className="h-24 mb-1 lg:h-20 md:h-12 sm:h-12 xs:h-[50px]" 
-        />
-                <div 
-            style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.9)' }} 
-            className="bg-red-600 shadow-custom-lg h-24 sm:h-12 xs:h-10 flex items-center"
-            >
-            <h1 className="text-white md:h-18 text-4xl md:text-3xl sm:text-xl xs:text-xl montserrat ml-2">
-                CHARCOAL LOUVERS
-            </h1>
-            </div>
-      </div>
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-      
-        <div style={{marginTop:'-45px'}} className="min-h-screen bg-gray-800">
-      <div className="max-w-4xl mx-auto px-8 md:px-12 py-6">
-        {/* Grid container */}
-        <div  className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 max-w-sm lg:max-w-none mt-6 mx-auto">
-          {categories.map((category) => (
-            <div 
-              key={category}
-              className="transform hover:scale-[1.02] transition-transform duration-200 "
-            >
-              {/* Main container with shadow effect */}
-              <div style={{boxShadow:'20px',cursor:'pointer',borderRadius:'8px'}} className="relative bg-white shadow-lg ">
-                {/* White background with raised effect */}
-                <div className="h-14 flex items-center justify-center px-6 relative z-10">
-                  <span className="text-gray-700 text-lg tracking-wider font-light">
-                    {category}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-
-
-
-      <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
-      {productSections.map((section, index) => (
-        <div key={index} className="mb-12">
-          {/* Size Header */}
-          <div  style={{backgroundColor:'red'}} className=" shadow-md mb-6 max-w-sm mx-auto lg:max-w-none montserrat">
-            <div className="py-2 px-4 text-center text-white">
-              {section.size}
-            </div>
-          </div>
-
-          {/* Product Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
-            {section.products.map((product, productIndex) => (
-              <div 
-                key={productIndex} 
-                className="bg-white p-3 shadow-lg"
-              >
-                <img
-                  src={product.image}
-                  alt={`Product ${product.id}`}
-                  className="w-full h-auto object-cover mb-2 "
-                />
-                <div className="text-center text-gray-600 text-sm ">
-                  {product.id}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-
-
-    </div>
     
-   
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []);
+    
+        const handleImageClick = (image, productId) => {
+            setSelectedImage({
+                image: image,
+                alt: `Product ${productId}`,
+                name: productId,
+            });
+        };
+    
+        const closeModal = () => {
+            setSelectedImage(null);
+        };
+    
+        return (
+            <div className="min-h-screen bg-gray-800">
+                <Navbar />
+                {/* Hero Section */}
+                <div className="relative mb-12">
+                    <img
+                        src={Image1}
+                        alt="Luxury interior wall covering"
+                        className="w-full h-[80vh] object-cover"
+                    />
+                    <div className="absolute bottom-6 left-8">
+                        <img
+                            src={Adhams}
+                            alt="Adhams logo"
+                            className="h-24 mb-1 lg:h-20 md:h-12 sm:h-12 xs:h-[50px]"
+                        />
+                        <div
+                            style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.9)' }}
+                            className="bg-red-600 shadow-custom-lg h-24 sm:h-12 xs:h-10 flex items-center"
+                        >
+                            <h1 className="text-white md:h-18 text-4xl md:text-3xl sm:text-xl xs:text-xl montserrat ml-2">
+                                CHARCOAL LOUVERS
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+    
+                {/* Product Sections */}
+                <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+                    {productSections.map((section, index) => (
+                        <div key={index} className="mb-12">
+                            {/* Size Header */}
+                            <div
+                                style={{ backgroundColor: 'red' }}
+                                className="bg-gray-800 shadow-md mb-6 max-w-sm mx-auto lg:max-w-none montserrat"
+                            >
+                                <div className="py-2 px-4 text-center text-white">
+                                    {section.size}
+                                </div>
+                            </div>
+    
+                            {/* Product Grid */}
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
+  {section.products.map((product, productIndex) => (
+    <div
+      key={productIndex}
+      className="bg-white p-3 shadow-lg flex flex-col items-center"
+    >
+      <img
+        src={product.image}
+        alt={`Product ${product.id}`}
+        className="w-[140px] h-[380px] object-cover cursor-pointer"
+        onClick={() =>
+          handleImageClick(product.image, product.id)
+        }
+      />
+      <div className="text-center font-medium text-sm mt-2">
+        {product.id}
+      </div>
+    </div>
+  ))}
+</div>
 
-
-
-
-
-
-
-
-
-                <Footer/>
-          
-        </div>
-  )
-
-}
+                        </div>
+                    ))}
+                </div>
+    
+                {/* Image Zoom Modal */}
+                <ImageZoomModal
+                    image={selectedImage?.image}
+                    alt={selectedImage?.alt}
+                    productName={selectedImage?.name}
+                    isOpen={!!selectedImage}
+                    onClose={closeModal}
+                />
+    
+                <Footer />
+            </div>
+        );
+    }
 export default Charcoal
