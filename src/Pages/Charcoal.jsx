@@ -66,13 +66,6 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
 
 
 
-
-
-
-
-
-
-
       const ImageZoomModal = ({ image, alt, productName, isOpen, onClose }) => {
         if (!isOpen) return null;
     
@@ -107,11 +100,15 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
       
         const [selectedImage, setSelectedImage] = useState(null);
     
-       
+        const categories = [
+          "12cm X 23 mm X 2.5 m ",
+          "16cm X 8 mm X 3.5 m ",
+          "30cm X 5 mm X 2.9 m ",
+      ];
 
       const productSections = [
         {
-          size: "12cm X 23 mm X 2.5 m (4 × 3)",
+          size: "12cm X 23 mm X 2.5 m ",
           products: [
             { id: "AD B_5", image: charcole12cm4_2 },
             { id: "AD B-9", image: charcole12cm4_1 },
@@ -154,7 +151,7 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
           ]
         },
         {
-          size: "16cm X 8 mm X 3.5 m (4 × 3)",
+          size: "16cm X 8 mm X 3.5 m ",
           products: [
             { id: "ADS34FJ", image: charcole16cm1_1 },
             { id: "ADS34FJ", image: charcole16cm2_1 },
@@ -172,7 +169,7 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
           ]
         },
         {
-          size: "30cm X 5 mm X 2.9 m (4 × 3)",
+          size: "30cm X 5 mm X 2.9 m ",
           products: [
             { id: "AD PS 8021", image: charcole30cm1 },
             { id: "AD PS 8018", image: charcole30cm2 },
@@ -208,85 +205,123 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
         const closeModal = () => {
             setSelectedImage(null);
         };
-    
-        return (
-            <div className="min-h-screen bg-gray-800">
-                <Navbar />
-                {/* Hero Section */}
-                <div className="relative mb-12">
-                    <img
-                        src={Image1}
-                        alt="Luxury interior wall covering"
-                        className="w-full h-[80vh] object-cover"
-                    />
-                    <div className="absolute bottom-6 left-8">
-                        <img
-                            src={Adhams}
-                            alt="Adhams logo"
-                            className="h-24 mb-1 lg:h-20 md:h-12 sm:h-12 xs:h-[50px]"
-                        />
-                        <div
-                            style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.9)' }}
-                            className="bg-red-600 shadow-custom-lg h-24 sm:h-12 xs:h-10 flex items-center"
-                        >
-                            <h1 className="text-white md:h-18 text-4xl md:text-3xl sm:text-xl xs:text-xl montserrat ml-2">
-                                CHARCOAL LOUVERS
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-    
-                {/* Product Sections */}
-                <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
-                    {productSections.map((section, index) => (
-                        <div key={index} className="mb-12">
-                            {/* Size Header */}
-                            <div
-                                style={{ backgroundColor: 'red' }}
-                                className="bg-gray-800 shadow-md mb-6 max-w-sm mx-auto lg:max-w-none montserrat"
-                            >
-                                <div className="py-2 px-4 text-center text-white">
-                                    {section.size}
-                                </div>
-                            </div>
-    
-                            {/* Product Grid */}
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
-  {section.products.map((product, productIndex) => (
-    <div
-      key={productIndex}
-      className="bg-white p-3 shadow-lg flex flex-col items-center"
-    >
-      <img
-        src={product.image}
-        alt={`Product ${product.id}`}
-        className="w-[140px] h-[380px] object-cover cursor-pointer"
-        onClick={() =>
-          handleImageClick(product.image, product.id)
-        }
-      />
-      <div className="text-center font-medium text-sm mt-2">
-        {product.id}
-      </div>
-    </div>
-  ))}
-</div>
 
-                        </div>
-                    ))}
-                </div>
-    
-                {/* Image Zoom Modal */}
-                <ImageZoomModal
-                    image={selectedImage?.image}
-                    alt={selectedImage?.alt}
-                    productName={selectedImage?.name}
-                    isOpen={!!selectedImage}
-                    onClose={closeModal}
+        
+        const scrollToSection = (categoryIndex) => {
+          const sectionId = `section-${categoryIndex}`;
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const navbarHeight = 100; // Adjust based on your navbar's height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            });
+          }
+        };
+        
+        return (
+          <div className="min-h-screen bg-gray-800">
+            <Navbar />
+            {/* Hero Section */}
+            <div className="relative mb-12">
+              <img
+                src={Image1}
+                alt="Luxury interior wall covering"
+                className="w-full h-[80vh] object-cover"
+              />
+              <div className="absolute bottom-6 left-8">
+                <img
+                  src={Adhams}
+                  alt="Adhams logo"
+                  className="h-24 mb-1 lg:h-20 md:h-12 sm:h-12 xs:h-[50px]"
                 />
-    
-                <Footer />
+                <div
+                  style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.9)' }}
+                  className="bg-red-600 shadow-custom-lg h-24 sm:h-12 xs:h-10 flex items-center"
+                >
+                  <h1 className="text-white md:h-18 text-4xl md:text-3xl sm:text-xl xs:text-xl montserrat ml-2">
+                    CHARCOAL LOUVERS
+                  </h1>
+                </div>
+              </div>
             </div>
+        
+            <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
+              <h1 style={{ fontSize: '35px' }} className="text-center text-white">
+                CATEGORIES
+              </h1>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-sm lg:max-w-none mt-6 mx-auto">
+                {categories.map((category, index) => (
+                  <div
+                    key={category}
+                    className="transform hover:scale-[1.02] transition-transform duration-200 cursor-pointer"
+                    onClick={() => scrollToSection(index)}
+                  >
+                    <div className="relative bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 rounded-lg">
+                      <div className="h-14 flex items-center justify-center px-6 relative z-10">
+                        <span style={{fontSize:'15px'}}  className="text-gray-700 text-lg tracking-wider font-light">
+                          {category}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+        
+            {/* Product Sections */}
+            <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+              {productSections.map((section, index) => (
+                <div id={`section-${index}`} key={index} className="mb-12">
+                  {/* Size Header */}
+                  <div
+                    style={{ backgroundColor: 'red' }}
+                    className="bg-gray-800 shadow-md mb-6 max-w-sm mx-auto lg:max-w-none montserrat"
+                  >
+                    <div className="py-2 px-4 text-center text-white">
+                      {section.size}
+                    </div>
+                  </div>
+        
+                  {/* Product Grid */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
+                    {section.products.map((product, productIndex) => (
+                      <div
+                        key={productIndex}
+                        className="bg-white p-3 shadow-lg flex flex-col items-center"
+                      >
+                        <img
+                          src={product.image}
+                          alt={`Product ${product.id}`}
+                          className="w-[140px] h-[380px] object-cover cursor-pointer"
+                          onClick={() =>
+                            handleImageClick(product.image, product.id)
+                          }
+                        />
+                        <div className="text-center font-medium text-sm mt-2">
+                          {product.id}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+        
+            {/* Image Zoom Modal */}
+            <ImageZoomModal
+              image={selectedImage?.image}
+              alt={selectedImage?.alt}
+              productName={selectedImage?.name}
+              isOpen={!!selectedImage}
+              onClose={closeModal}
+            />
+        
+            <Footer />
+          </div>
         );
     }
 export default Charcoal
