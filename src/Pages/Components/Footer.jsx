@@ -60,7 +60,7 @@ function Footer() {
       
       {/* Copyright */}
       <div className="text-center text-sm text-gray-600 montserrat">
-        <p>@2024 DEZIONER CEILING CO. All rights reserved.</p>
+        <p>@2024 DEZINER CEILING CO. All rights reserved.</p>
         <p>powered by Cybernms</p>
       </div>
     </div>

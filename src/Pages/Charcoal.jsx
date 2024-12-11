@@ -36,16 +36,16 @@ import charcole12cm16_1 from '../Assets/charcole/12cm/charcole12cm16.1.jpg'
 import charcole12cm16_2 from '../Assets/charcole/12cm/charcole12cm16.2.jpg'
 
 
-import charcole16cm1_1 from '../Assets/charcole/12cm/charcole16cm1.1.jpg'
-import charcole16cm2_1 from '../Assets/charcole/12cm/charcole16cm2.2.jpg'
-import charcole16cm2_2 from '../Assets/charcole/12cm/charcole16cm2.2.jpg'
-import charcole16cm1 from '../Assets/charcole/12cm/charcole16cm1.jpg'
-import charcole16cm3_1 from '../Assets/charcole/12cm/charcole16cm3.1.jpg'
-import charcole16cm3_2 from '../Assets/charcole/12cm/charcole16cm3.2.jpg'
-import charcole16cm3_3 from '../Assets/charcole/12cm/charcole16cm3.3.jpg'
-import charcole16cm4_1 from '../Assets/charcole/12cm/charcole16cm4.1.jpg'
-import charcole16cm4_2 from '../Assets/charcole/12cm/charcole16cm4.2.jpg'
-import charcole16cm4_3 from '../Assets/charcole/12cm/charcole16cm4.3.jpg'
+import charcole16cm1 from '../Assets/charcole/12cm/charcole16cm1.png'
+import charcole16cm1_1 from '../Assets/charcole/12cm/charcole16cm1.1.png'
+import charcole16cm2_1 from '../Assets/charcole/12cm/charcole16cm2.1.png'
+import charcole16cm2_2 from '../Assets/charcole/12cm/charcole16cm2.2.png'
+import charcole16cm3_1 from '../Assets/charcole/12cm/charcole16cm3.1.png'
+import charcole16cm3_2 from '../Assets/charcole/12cm/charcole16cm3.2.png'
+import charcole16cm3_3 from '../Assets/charcole/12cm/charcole16cm3.3.png'
+// import charcole16cm4_1 from '../Assets/charcole/12cm/charcole16cm4.1.jpg'
+// import charcole16cm4_2 from '../Assets/charcole/12cm/charcole16cm4.2.jpg'
+// import charcole16cm4_3 from '../Assets/charcole/12cm/charcole16cm4.3.jpg'
 
 
 import charcole30cm1 from '../Assets/charcole/12cm/charcole30cm1.jpg'
@@ -110,37 +110,37 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
         {
           size: "12cm X 23 mm X 2.5 m ",
           products: [
-            { id: "AD B_5", image: charcole12cm4_2 },
-            { id: "AD B-9", image: charcole12cm4_1 },
+            { id: "AD B_5", image: charcole12cm4_2 , width: 130, height: 330 },
+            { id: "AD B-9", image: charcole12cm4_1 , width: 130, height: 330 },
 
-            { id: "AD 308-9", image: charcole12cm5_1 },
-            { id: "AD 308A-11", image: charcole12cm5_2 },
-            { id: "ADS34FJ", image: charcole12cm6_1 },
-            { id: "ADS34FJ", image: charcole12cm7_1 },
-            { id: "ADS34FJ", image: charcole12cm7_2 },
-            { id: "ADS34FJ", image: charcole12cm8_1 },
-            { id: "ADS34FJ", image: charcole12cm8_2 },
-            { id: "ADS34FJ", image: charcole12cm9_1 },
-            { id: "ADS34FJ", image: charcole12cm9_2 },
-            { id: "ADS34FJ", image: charcole12cm9_3 },
-            { id: "ADS34FJ", image: charcole12cm10_1 },
-            { id: "ADS34FJ", image: charcole12cm10_2 },
-            { id: "ADS34FJ", image: charcole12cm10_3 },
-            { id: "ADS34FJ", image: charcole12cm11_1 },
-            { id: "ADS34FJ", image: charcole12cm11_2 },
-            { id: "ADS34FJ", image: charcole12cm11_3 },
-            { id: "ADS34FJ", image: charcole12cm12_1 },
-            { id: "ADS34FJ", image: charcole12cm12_2 },
-            { id: "ADS34FJ", image: charcole12cm13_1 },
-            { id: "ADS34FJ", image: charcole12cm13_2 },
-            { id: "ADS34FJ", image: charcole12cm14_1 },
-            { id: "ADS34FJ", image: charcole12cm14_2 },
-            { id: "ADS34FJ", image: charcole12cm14_3 },
-            { id: "ADS34FJ", image: charcole12cm15_1 },
-            { id: "ADS34FJ", image: charcole12cm15_2 },
-            { id: "ADS34FJ", image: charcole12cm15_3 },
-            { id: "ADS34FJ", image: charcole12cm16_1 },
-            { id: "ADS34FJ", image: charcole12cm16_2 },
+            { id: "AD 308-9", image: charcole12cm5_1 , width: 130, height: 330  },
+            { id: "AD 308A-11", image: charcole12cm5_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm6_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm7_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm7_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm8_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm8_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm9_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm9_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm9_3 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm10_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm10_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm10_3 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm11_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm11_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm11_3 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm12_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm12_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm13_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm13_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm14_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm14_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm14_3 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm15_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm15_2 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm15_3 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm16_1 , width: 130, height: 330  },
+            { id: "ADS34FJ", image: charcole12cm16_2 , width: 130, height: 330  },
 
 
             
@@ -153,17 +153,18 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
         {
           size: "16cm X 8 mm X 3.5 m ",
           products: [
-            { id: "ADS34FJ", image: charcole16cm1_1 },
-            { id: "ADS34FJ", image: charcole16cm2_1 },
-            { id: "ADS34FJ", image: charcole16cm2_2 },
-            { id: "ADS34FJ", image: charcole16cm1 },
+            { id: "ADS34FJ1", image: charcole16cm1_1 ,width: 160, height: 330},
             
-            { id: "ADS34FJ", image: charcole16cm3_1 },
-            { id: "ADS34FJ", image: charcole16cm3_2 },
-            { id: "ADS34FJ", image: charcole16cm3_3 },
-            { id: "ADS34FJ", image: charcole16cm4_1 },
-            { id: "ADS34FJ", image: charcole16cm4_2 },
-            { id: "ADS34FJ", image: charcole16cm4_3 },
+            { id: "ADS34FJ4", image: charcole16cm1 ,width: 160, height: 330},
+            { id: "ADS34FJ4", image: charcole16cm2_1 ,width: 160, height: 330},
+            { id: "ADS34FJ4", image: charcole16cm2_2 ,width: 160, height: 330},
+
+
+            
+            { id: "ADS34FJ5", image: charcole16cm3_1 ,width: 160, height: 330},
+            { id: "ADS34FJ6", image: charcole16cm3_2 ,width: 160, height: 330},
+            { id: "ADS34FJ7", image: charcole16cm3_3 ,width: 160, height: 330},
+            
 
             
           ]
@@ -273,7 +274,7 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
             </div>
         
             {/* Product Sections */}
-            <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+            <div  className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
               {productSections.map((section, index) => (
                 <div id={`section-${index}`} key={index} className="mb-12">
                   {/* Size Header */}
@@ -287,16 +288,17 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
                   </div>
         
                   {/* Product Grid */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
+                  <div  className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
                     {section.products.map((product, productIndex) => (
                       <div
                         key={productIndex}
-                        className="bg-white p-3 shadow-lg flex flex-col items-center"
+                        className="bg-white p-3  shadow-lg flex flex-col items-center"
                       >
                         <img
                           src={product.image}
                           alt={`Product ${product.id}`}
-                          className="w-[140px] h-[380px] object-cover cursor-pointer"
+                          className="object-cover cursor-pointer"
+                          style={{ width: `${product.width}px`, height: `${product.height}px` }}
                           onClick={() =>
                             handleImageClick(product.image, product.id)
                           }

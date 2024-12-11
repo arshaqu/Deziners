@@ -8,6 +8,7 @@ import PvcLouvers from './Pages/PvcLouvers.jsx'
 import WpvcLouvers from './Pages/WpvcLouvers.jsx';
 import ContactUs from './Pages/ContactUs.jsx';
 import AboutUs from './Pages/AboutUs.jsx';
+import SoffitLouvers from './Pages/SoffitLouvers.jsx';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/pvc_louvers" element={<PvcLouvers />} />
         <Route path="/charcoal" element={<Charcoal />} />
         <Route path="/wpvc_louvers" element={<WpvcLouvers />} />
+        <Route path="/soffit_louvers" element={<SoffitLouvers/>} />
+
         <Route path="/contactus" element={<ContactUs/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
         

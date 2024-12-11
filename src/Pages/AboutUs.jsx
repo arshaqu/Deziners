@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image1 from '../Assets/Image1.jpg';
 import image2 from '../Assets/imageabout.jpg'
+import Navbar from './Components/Navbar';
 
 function AboutUs() {
   const [activeTab, setActiveTab] = useState('History');
@@ -15,6 +16,7 @@ function AboutUs() {
 
   return (
     <div className="w-full min-h-screen bg-neutral-50">
+      <Navbar/>
       {/* Hero Section */}
       <div className="relative h-80 mb-16">
         {/* Background Image */}

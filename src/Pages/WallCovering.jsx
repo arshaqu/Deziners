@@ -35,7 +35,7 @@ function WallCovering() {
           id: 4,
           name: 'SOFFIT LOUVERS',
           image: softlouvers,
-          link: '/pvc_louvers',
+          link: '/soffit_louvers',
         }
     ];
 

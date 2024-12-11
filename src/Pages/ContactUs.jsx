@@ -5,10 +5,12 @@ import twitter from '../Assets/Icons/Twitter.png'
 import youtube from '../Assets/Icons/youtube.png'
 
 import backgroundImage from '../Assets/imagebg.jpg'
+import Navbar from './Components/Navbar';
 
 function ContactUs() {
   return (
     <div>
+      <Navbar/>
     <div
       className="min-h-screen relative"
       style={{
@@ -20,7 +22,7 @@ function ContactUs() {
       {/* Contact Section Header with Shadow Effect */}
       <div className="pt-12 pb-20 text-center montserrat">
         <h1
-          className="text-5xl font-bold text-white"
+          className="text-5xl font-bold text-white mt-5"
           style={{
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
           }}
