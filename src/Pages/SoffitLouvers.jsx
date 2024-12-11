@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar';
-import Adhams from './Adhams';
+import Adhams from '../Assets/adams1.png';
 import Footer from './Components/Footer';
 
 
@@ -73,10 +73,10 @@ function SoffitLouvers() {
     {
       size: "30cm X 12 mm X 3.05 m ",
       products: [
-        {id: "SO 1007",  image: soffit1 , width: 130, height: 330 },
-        { id: "SO 1006", image: soffit2 , width: 130, height: 330 },
-        {id: "15002",  image: soffit3 , width: 130, height: 330 },
-        { id: "15007", image: soffit4, width: 130, height: 330  },
+        {id: "SO 1007",  image: soffit1 , width: 180, height: 330 },
+        { id: "SO 1006", image: soffit2 , width: 180, height: 330 },
+        {id: "15002",  image: soffit3 , width: 180, height: 330 },
+        { id: "15007", image: soffit4, width: 180, height: 330  },
 
 
 
@@ -138,7 +138,7 @@ function SoffitLouvers() {
               className="bg-red-600 shadow-custom-lg h-24 sm:h-12 xs:h-10 flex items-center"
             >
               <h1 className="text-white md:h-18 text-4xl md:text-3xl sm:text-xl xs:text-xl montserrat ml-2">
-                CHARCOAL LOUVERS
+                SOFFIT LOUVERS
               </h1>
             </div>
           </div>

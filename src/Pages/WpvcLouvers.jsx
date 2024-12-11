@@ -85,53 +85,53 @@ function WpvcLouvers() {
             size: '3G (195 mm X 13 mm X 2900 mm)',
             id: 'section-3g',
             products: [
-                { id: 'FOREST TEAK 3G', image: image3G1 },
-                { id: 'GOLDEN OAK 3G', image: image3G2 },
-                { id: 'MAHOGANY 3G', image: image3G3 },
-                { id: 'WALNUT - 13 3G', image: image3G4 },
+                { id: 'FOREST TEAK 3G', image: image3G1 , width: 180, height: 330},
+                { id: 'GOLDEN OAK 3G', image: image3G2 , width: 180, height: 330},
+                { id: 'MAHOGANY 3G', image: image3G3 , width: 180, height: 330},
+                { id: 'WALNUT - 13 3G', image: image3G4 , width: 180, height: 330},
             ],
         },
         {
             size: '4G (160 mm X 12 mm X 2900 mm)',
             id: 'section-4g',
             products: [
-                { id: 'GOLDEN THREAD 4G', image: image4G1 },
-                { id: 'WHITE MARBLE 4G', image: image4G2 },
-                { id: 'WHITE OAK 4G', image: image4G3 },
-                { id: 'GRAPHITE GREY 4G', image: image4G4 },
-                { id: 'SILVER GREY 4G', image: image4G5 },
-                { id: 'BURMA TEAK 4G', image: image4G6 },
-                { id: 'WALNUT 4G', image: image4G7 },
-                { id: 'HAZELNUT 4G', image: image4G8 },
-                { id: 'SUNNYWOOD 4G', image: image4G9 },
-                { id: 'JEMWOOD 4G', image: image4G10 },
-                { id: 'JEM 378 4G', image: image4G11 },
-                { id: 'WALNUT 4G', image: image4G12 },
+                { id: 'GOLDEN THREAD 4G', image: image4G1 , width: 200, height: 390},
+                { id: 'WHITE MARBLE 4G', image: image4G2 , width: 200, height: 390},
+                { id: 'WHITE OAK 4G', image: image4G3 , width: 200, height: 390},
+                { id: 'GRAPHITE GREY 4G', image: image4G4 , width: 200, height: 390},
+                { id: 'SILVER GREY 4G', image: image4G5 , width: 200, height: 390},
+                { id: 'BURMA TEAK 4G', image: image4G6 , width: 200, height: 390},
+                { id: 'WALNUT 4G', image: image4G7 , width: 200, height: 390},
+                { id: 'HAZELNUT 4G', image: image4G8 , width: 200, height: 390},
+                { id: 'SUNNYWOOD 4G', image: image4G9 , width: 200, height: 390},
+                { id: 'JEMWOOD 4G', image: image4G10 , width: 200, height: 390},
+                { id: 'JEM 378 4G', image: image4G11 , width: 200, height: 390},
+                { id: 'WALNUT 4G', image: image4G12 , width: 200, height: 390},
                 // ... keep all other 4G products
             ],
         },
         {
             size: '5G (160 mm X 8mm X 2980 mm)',
             id: 'section-5g',
-            products: [{ id: 'WALNUT 5G', image: image5G1 }],
+            products: [{ id: 'WALNUT 5G', image: image5G1, width: 220, height: 410 }],
         },
         {
             size: '6G (160 mm X 18 mm X 2900 mm)',
             id: 'section-6g',
             products: [
-                { id: 'WHITE MARBLE 6G', image: image6G1 },
-                { id: 'JEMWOOD 6G', image: image6G2 },
-                { id: 'DARK GRAY 6G', image: image6G3 },
+                { id: 'WHITE MARBLE 6G', image: image6G1 , width: 200, height: 420},
+                { id: 'JEMWOOD 6G', image: image6G2 , width: 200, height: 420},
+                { id: 'DARK GRAY 6G', image: image6G3 , width: 200, height: 420},
             ],
         },
         {
             size: '8G (160 mm X 17 mm X 2900 mm)',
             id: 'section-8g',
             products: [
-                { id: 'GRAPHITE GREY 8G', image: image8G1 },
-                { id: 'JEM 2017 8G', image: image8G2 },
-                { id: 'GLITTER BLACK 8G', image: image8G3 },
-                { id: 'WHITE MARBLE 8G', image: image8G4 },
+                { id: 'GRAPHITE GREY 8G', image: image8G1 , width: 230, height: 450},
+                { id: 'JEM 2017 8G', image: image8G2 , width: 230, height: 450},
+                { id: 'GLITTER BLACK 8G', image: image8G3 , width: 230, height: 450},
+                { id: 'WHITE MARBLE 8G', image: image8G4 , width: 230, height: 450},
             ],
         },
     ];
@@ -236,13 +236,14 @@ function WpvcLouvers() {
                                         className="bg-white p-3 shadow-lg"
                                     >
                                        <div className="flex justify-center items-center">
-  <img
-    src={product.image}
-    alt={`Product ${product.id}`}
-    className="w-auto h-[380px] object-cover cursor-pointer"
-    onClick={() => handleImageClick(product.image, product.id)}
-  />
-</div>
+                                <img
+                                    src={product.image}
+                                    alt={`Product ${product.id}`}
+                                    className=" object-cover cursor-pointer"
+                                    onClick={() => handleImageClick(product.image, product.id)}
+                                    style={{ width: `${product.width}px`, height: `${product.height}px` }}
+                                />
+                                </div>
                                         <div className="text-center font-medium text-sm mt-2">
                                             {product.id}
                                         </div>

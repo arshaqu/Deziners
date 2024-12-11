@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Image2 from '../Assets/Image5.jpg';
-import Image3 from '../Assets/Image14.jpg';
+import Image2 from '../Assets/Image1.jpg';
+import Image3 from '../Assets/Image2.jpg';
 import Deziner from '../Assets/DezinerTr.png';
 import Adhams from '../Assets/ad.png';
 import Simple from '../Assets/dff.png';
@@ -66,14 +66,14 @@ function Home() {
             }}
           />
 
-          <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+          <div className="absolute inset-0  flex items-center justify-center">
             <div
               style={{
-                borderRadius: '30px',
-                boxShadow: '1px 3px 5px 0.2px rgba(0, 0, 0, 3.0)',
+                backdropFilter: 'blur(1px)', // Blurred effect
+                WebkitBackdropFilter: 'blur(10px)',
                 cursor: 'pointer',
               }}
-              className="p-6 bg-black/25 rounded-xl"
+              className="p-6  rounded-xl"
             >
               <img
                 src={Deziner}
@@ -103,7 +103,7 @@ function Home() {
 
       <div className="py-12 bg-gray-50">
         <h2 className="text-center text-2xl font-thin mb-8 Montserrat lg:ml-[-120px]">
-          OUR BRANDS
+          OUR PRODUCTS 
         </h2>
         <div className="container w-full px-4 flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl lg:ml-[10px]">

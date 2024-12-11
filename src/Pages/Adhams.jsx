@@ -87,7 +87,7 @@ function Adhams() {
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 montserrat text-gray-400" >
-            Our Services
+            Our Catagories
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,10 +115,10 @@ function Adhams() {
       <section className="py-16 px-4 md:px-8 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Space?
+          Design Your Vision, Inside and Out?
           </h2>
           <p className="text-xl mb-8">
-            Contact us today for a free consultation
+          Discover the Difference Today!
           </p>
           <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Get in Touch

@@ -73,39 +73,39 @@ function PvcLouvers() {
             size:  '10 Ft X 12 inch',
             id: "section-10-12",
             products: [
-                { id: "2G - 1516", image: wpclouver10X12 },
-                { id: "2G - 1515", image: wpclouver10X12_2 },
-                { id: "2G - 1520", image: wpclouver10X12_3 },
-                { id: "L-102", image: wpclouver10X12_4 },
-                { id: "2024 (WALNUT)", image: wpclouver10X12_5 },
-                { id: "3025 (DARKOAK14)", image: wpclouver10X12_6 },
-                { id: "W 356 (GOLDLINE)", image: wpclouver10X12_7 },
-                { id: "IN - 539", image: wpclouver10X12_8 },
-                { id: "2007 (MAHOGANY)", image: wpclouver10X12_9 },
-                { id: "2052 (WHITE MARBLE)", image: wpclouver10X12_10 },
-                { id: "2016", image: wpclouver10X12_11 },
-                { id: "2023 (RED OAK)", image: wpclouver10X12_12 },
-                { id: "2004 (OAKWOOD)", image: wpclouver10X12_13 },
-                { id: "2006 (FOREST TEAK)", image: wpclouver10X12_14 },
-                { id: "2010 (WHITE)", image: wpclouver10X12_15 },
-                { id: "2020", image: wpclouver10X12_16 },
-                { id: "2017", image: wpclouver10X12_17 },
+                { id: "2G - 1516", image: wpclouver10X12 , width: 130, height: 330},
+                { id: "2G - 1515", image: wpclouver10X12_2 , width: 130, height: 330},
+                { id: "2G - 1520", image: wpclouver10X12_3 , width: 130, height: 330},
+                { id: "L-102", image: wpclouver10X12_4 , width: 130, height: 330},
+                { id: "2024 (WALNUT)", image: wpclouver10X12_5 , width: 130, height: 330},
+                { id: "3025 (DARKOAK14)", image: wpclouver10X12_6 , width: 130, height: 330},
+                { id: "W 356 (GOLDLINE)", image: wpclouver10X12_7 , width: 130, height: 330},
+                { id: "IN - 539", image: wpclouver10X12_8 , width: 130, height: 330},
+                { id: "2007 (MAHOGANY)", image: wpclouver10X12_9 , width: 130, height: 330},
+                { id: "2052 (WHITE MARBLE)", image: wpclouver10X12_10 , width: 130, height: 330},
+                { id: "2016", image: wpclouver10X12_11 , width: 130, height: 330},
+                { id: "2023 (RED OAK)", image: wpclouver10X12_12 , width: 130, height: 330},
+                { id: "2004 (OAKWOOD)", image: wpclouver10X12_13 , width: 130, height: 330},
+                { id: "2006 (FOREST TEAK)", image: wpclouver10X12_14 , width: 130, height: 330},
+                { id: "2010 (WHITE)", image: wpclouver10X12_15 , width: 130, height: 330},
+                { id: "2020", image: wpclouver10X12_16 , width: 130, height: 330},
+                { id: "2017", image: wpclouver10X12_17 , width: 130, height: 330},
             ]
         },
         {
             size: "10 Ft X 10 inch",
             id: "section-10-10",
             products: [
-                { id: "8G - 7012", image: wpclouver10X10_1 },
-                { id: "305 (BEIGE)", image: wpclouver10X10_2 },
+                { id: "8G - 7012", image: wpclouver10X10_1, width: 160, height: 360 },
+                { id: "305 (BEIGE)", image: wpclouver10X10_2, width: 160, height: 360 },
             ]
         },
         {
             size: "uPVC 10 Ft X 12 inch",
             id: "section-upvc",
             products: [
-                { id: "1251 uPVC", image: uPVC2 },
-                { id: "1252 uPVC", image: uPVC1 },
+                { id: "1251 uPVC", image: uPVC2 , width: 200, height: 410},
+                { id: "1252 uPVC", image: uPVC1 , width: 200, height: 410},
             ]
         }
     ];
@@ -171,7 +171,7 @@ function PvcLouvers() {
 
             <div style={{ marginTop: '-45px' }} className="min-h-screen bg-gray-800">
                 {/* Categories Section */}
-                <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
+                {/* <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
                     <h1 style={{fontSize:'35px'}} className='text-center text-white'>CATEGORIES</h1>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-sm lg:max-w-none mt-6 mx-auto">
                         {categories.map((category, index) => (
@@ -190,7 +190,7 @@ function PvcLouvers() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Product Sections */}
                 <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
@@ -211,7 +211,8 @@ function PvcLouvers() {
                                         <img
                                             src={product.image}
                                             alt={`Product ${product.id}`}
-                                            className="w-[40] h-[40vh] object-cover mb-2 mx-auto cursor-pointer"
+                                            className=" object-cover mb-2 mx-auto cursor-pointer"
+                                            style={{ width: `${product.width}px`, height: `${product.height}px` }}
                                             onClick={() => handleImageClick(product.image, product.id)}
                                         />
                                         <div className="text-center text-gray-600 text-sm">

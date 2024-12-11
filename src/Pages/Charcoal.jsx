@@ -250,7 +250,7 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
               </div>
             </div>
         
-            <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
+            {/* <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
               <h1 style={{ fontSize: '35px' }} className="text-center text-white">
                 CATEGORIES
               </h1>
@@ -271,7 +271,7 @@ import charcole30cm13 from '../Assets/charcole/12cm/charcole30cm13.jpg'
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
         
             {/* Product Sections */}
             <div  className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">

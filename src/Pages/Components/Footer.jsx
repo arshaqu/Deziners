@@ -17,17 +17,19 @@ function Footer() {
       
       {/* Navigation Links */}
       <nav className="mb-4 w-full">
-  <ul
-    style={{ cursor: 'pointer' }}
-    className="flex justify-center space-x-4 lg:space-x-16 sm:space-x-5 xs:space-x-4 text-gray-700 montserrat text-xs sm:text-sm">
-    <li className='sm:space-x-5'>HOME</li>
-    <li>|</li>
-    <li>PRODUCT</li>
-    <li>|</li>
-    <li>ABOUT US</li>
-    <li>|</li>
-    <li>CONTACT US</li>
-  </ul>
+      <ul
+  style={{ cursor: 'pointer' }}
+  className="flex justify-center space-x-2 sm:space-x-4 md:space-x-14 text-gray-700 montserrat text-xs sm:text-sm md:text-base">
+  <li className="sm:space-x-4">HOME</li>
+  <li>|</li>
+  <li>CATEGORIES</li>
+  <li>|</li>
+  <li>ABOUT US</li>
+  <li>|</li>
+  <li>CONTACT US</li>
+</ul>
+
+
 </nav>
 
       

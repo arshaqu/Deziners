@@ -57,25 +57,25 @@ const Navbar = () => {
         href="/"
         className="text-white hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
       >
-        Home
+        HOME
       </a>
       <a
         href="/aboutus"
         className="text-white hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
       >
-        About
+        ABOUT US
       </a>
       <a
-        href="# "
+        href="/adhams"
         className="text-white hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
       >
-        Product
+        CATAGORIES
       </a>
       <a
         href="/contactus"
         className="text-white hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
       >
-        Contact
+        CONTACT US
       </a>
     </div>
   </div>
