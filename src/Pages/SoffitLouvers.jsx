@@ -118,7 +118,7 @@ function SoffitLouvers() {
     };
     
     return (
-      <div className="min-h-screen bg-gray-800">
+      <div style={{backgroundColor:'#d9d9d9'}} className="min-h-screen ">
         <Navbar />
         {/* Hero Section */}
         <div className="relative mb-12">
@@ -168,7 +168,7 @@ function SoffitLouvers() {
         </div> */}
     
         {/* Product Sections */}
-        <div  className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+        <div style={{backgroundColor:'#d9d9d9'}} className="max-w-7xl mx-auto px-4 py-8 ">
           {productSections.map((section, index) => (
             <div id={`section-${index}`} key={index} className="mb-12">
               {/* Size Header */}
@@ -182,11 +182,11 @@ function SoffitLouvers() {
               </div>
     
               {/* Product Grid */}
-              <div  className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
+              <div style={{backgroundColor:'#d9d9d9'}} className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-sm lg:max-w-none mx-auto montserrat">
                 {section.products.map((product, productIndex) => (
                   <div
                     key={productIndex}
-                    className="bg-white p-3  shadow-lg flex flex-col items-center"
+                    className="bg-white p-3 shadow-lg flex flex-col items-center"
                   >
                     <img
                       src={product.image}

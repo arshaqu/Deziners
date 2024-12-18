@@ -17,7 +17,7 @@ function Adhams() {
 
   const categories = [
     { title: 'WALL COVERING', image: wallcovering, path: '/wallcovering' },
-    { title: 'EXTERIOR GLADDING', image: ExteriorCladding, path: '/exteriorcladding' },
+    { title: 'EXTERIOR CLADDING', image: ExteriorCladding, path: '/exteriorcladding' },
     { title: 'FALSE CEILING', image: Falseceiling, path: '/falseceiling' },
     { title: 'EXTERIOR LAMINATES', image: exteriorlaminates, path: '/exteriorlaminates' },
     { title: 'WHITE MOLDINGS', image: WhiteMoldings, path: '/whitemoldings' },
@@ -37,11 +37,12 @@ function Adhams() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative w-full h-screen">
-        <div className="absolute inset-0 z-0"> {/* Sets a lower z-index for the overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden"> {/* Sets a lower z-index for the overlay */}
           <img
             src={Image3}
+            style={{overflow:'hidden'}}
             alt="Modern Interior"
-            className="w-full h-full object-cover"
+            className="w-full h-full slow-zoom-out object-cover"
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
@@ -50,7 +51,7 @@ function Adhams() {
           <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
             Transform Your Space
           </h1>
-          <p className="text-xl md:text-2xl text-center max-w-2xl mx-4 montserrat text-white">
+          <p style={{color:'#F5EFFF'}} className="text-xl md:text-2xl text-center max-w-5xl mx-4 montserrat ">
             Premium Interior Design Solutions for Your Home and Office
           </p>
         </div>
@@ -73,18 +74,26 @@ function Adhams() {
 
       {/* Showcase Section */}
       <section className="relative w-full h-screen">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 ">
           <img
             src={Image2}
-            alt="Modern Interior"
+            alt="Modern Interior slow-zoom-out"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-gray-800 montserrat">
+          <h1 style={{color:'#D8DBBD'}} className="text-4xl lg:text-7xl md:text-6xl font-bold text-center mb-4">
+          Where quality meets design...!
+          </h1>
+          <p className="text-xl md:text-2xl text-center max-w-2xl mx-4 montserrat text-white">
+          From interiors that comfort to exteriors that impress, we’ve got you covered
+          </p>
+        </div>
       </section>
 
       {/* Categories Section */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-16 px-4 md:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 montserrat text-gray-400" >
             Our Catagories
@@ -112,19 +121,7 @@ function Adhams() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 md:px-8 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Design Your Vision, Inside and Out?
-          </h2>
-          <p className="text-xl mb-8">
-          Discover the Difference Today!
-          </p>
-          <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Get in Touch
-          </button>
-        </div>
-      </section>
+    
       <Footer />
     </div>
     

@@ -12,7 +12,7 @@ function Footer() {
       <img 
         src={Image1} 
         alt="Deziner Ceiling Co." 
-        className="h-36 mb-4"
+        className="h-36 mb-4 lg:h-[180px]"
       />
       
       {/* Navigation Links */}
@@ -20,13 +20,37 @@ function Footer() {
       <ul
   style={{ cursor: 'pointer' }}
   className="flex justify-center space-x-2 sm:space-x-4 md:space-x-14 text-gray-700 montserrat text-xs sm:text-sm md:text-base">
-  <li className="sm:space-x-4">HOME</li>
+  <li className="sm:space-x-4 color-gray-500"> <a 
+
+href="/"
+className=" hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
+>
+HOME
+</a></li>
   <li>|</li>
-  <li>CATEGORIES</li>
+  <li className="sm:space-x-4 color-gray-500"> <a 
+
+href="/adhams"
+className=" hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
+>
+CATAGORIES
+</a></li>
   <li>|</li>
-  <li>ABOUT US</li>
+  <li className="sm:space-x-4 color-gray-500"> <a 
+
+href="/aboutus"
+className=" hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
+>
+ABOUT US
+</a></li>
   <li>|</li>
-  <li>CONTACT US</li>
+  <li className="sm:space-x-4 color-gray-500"> <a 
+
+href="/contactus"
+className=" hover:text-black px-3 py-2 rounded-md text-sm font-medium montserrat"
+>
+CONTACT US
+</a></li>
 </ul>
 
 

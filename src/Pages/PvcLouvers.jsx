@@ -37,20 +37,20 @@ const ImageZoomModal = ({ image, alt, productName, isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={onClose}
         >
-            <div className="relative w-full max-w-2xl bg-gray-100 rounded-lg shadow-lg p-6">
+            <div style={{backgroundColor:'#043a3f'}} className="relative w-full max-w-2xl  rounded-lg shadow-lg p-6">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-black bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 transition-opacity"
+                    className="absolute top-4 right-4 text-black bg-green-100 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-800 transition-opacity"
                 >
                     ×
                 </button>
                 <img
                     src={image}
                     alt={alt}
-                    className="w-full h-auto max-h-[75vh] object-contain rounded-md border-4 border-gray-400 mb-4"
+                    className="w-full h-auto max-h-[75vh] object-contain rounded-md border-4 border-green-200 mb-4"
                     onClick={(e) => e.stopPropagation()}
                 />
-                <div className="text-center text-lg font-semibold text-gray-700">
+                <div className="text-center text-lg font-semibold text-green-100">
                     {productName}
                 </div>
             </div>
@@ -169,7 +169,7 @@ function PvcLouvers() {
                 </div>
             </div>
 
-            <div style={{ marginTop: '-45px' }} className="min-h-screen bg-gray-800">
+            <div style={{ marginTop: '-45px' ,backgroundColor:'#043a3f'}} className="min-h-screen ">
                 {/* Categories Section */}
                 {/* <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
                     <h1 style={{fontSize:'35px'}} className='text-center text-white'>CATEGORIES</h1>
@@ -193,7 +193,7 @@ function PvcLouvers() {
                 </div> */}
 
                 {/* Product Sections */}
-                <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+                <div  className="max-w-7xl mx-auto px-4 py-8 ">
                     {productSections.map((section, index) => (
                         <div key={index} id={section.id} className="mb-12">
                             <div style={{backgroundColor:'red'}} className="shadow-md mb-6 max-w-sm mx-auto lg:max-w-none montserrat">
@@ -215,7 +215,7 @@ function PvcLouvers() {
                                             style={{ width: `${product.width}px`, height: `${product.height}px` }}
                                             onClick={() => handleImageClick(product.image, product.id)}
                                         />
-                                        <div className="text-center text-gray-600 text-sm">
+                                        <div style={{color:'#043a3f'}} className="text-center text-sm">
                                             {product.id}
                                         </div>
                                     </div>

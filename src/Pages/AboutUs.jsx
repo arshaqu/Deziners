@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Image1 from '../Assets/Image1.jpg';
 import image2 from '../Assets/imageabout.jpg'
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function AboutUs() {
   const [activeTab, setActiveTab] = useState('History');
@@ -79,6 +80,7 @@ function AboutUs() {
           We are Deziner Ceiling Co., a product-selling company primarily focused on supplying high-quality materials to aluminum shops. Based in Inkel City, Malappuram, Kerala, we have been serving the market successfully since 2018. Our product range includes machine tools, laminate sheets, plywood, ceiling cornice, floor and wall coverings, all offered with a commitment to effective and timely delivery. As a pricing leader in the market, we identified a gap due to a ceiling balance restriction and seized the opportunity to meet the growing demand. By understanding the potential of the market and the needs of our customers, we quickly established a strong presence in the industry, positioning ourselves as a trusted supplier.          </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Adhams from '../Assets/ad.png';
 import Simple from '../Assets/dff.png';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
+import Image101 from'../Assets/Image101.jpg';
 
 function Home() {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function Home() {
 
   // Cycle between Image2 and Image3 every 5 seconds
   useEffect(() => {
-    const images = [Image2, Image3];
+    const images = [Image2,Image101];
     let index = 0;
 
     const interval = setInterval(() => {
@@ -59,7 +60,7 @@ function Home() {
           <img
             src={currentImage}
             alt="Background"
-            className="w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110"
+            className="w-full  h-full object-cover slow-zoom-out transition-transform duration-500 ease-in-out transform hover:scale-110"
             style={{
               transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
               transform: 'scale(1.1)',
@@ -69,7 +70,7 @@ function Home() {
           <div className="absolute inset-0  flex items-center justify-center">
             <div
               style={{
-                backdropFilter: 'blur(1px)', // Blurred effect
+                backdropFilter: 'blur(2px)', // Blurred effect
                 WebkitBackdropFilter: 'blur(10px)',
                 cursor: 'pointer',
               }}
@@ -78,7 +79,7 @@ function Home() {
               <img
                 src={Deziner}
                 alt="Deziner Logo"
-                className="max-w-[200px] md:max-w-[300px] w-full h-auto"
+                className="max-w-[220px] md:max-w-[340px] w-full h-auto"
               />
             </div>
           </div>
@@ -101,39 +102,52 @@ function Home() {
             </a>
       </div>
 
-      <div className="py-12 bg-gray-50">
-        <h2 className="text-center text-2xl font-thin mb-8 Montserrat lg:ml-[-120px]">
+      <div className="py-12 bg-red-50 mt-3">
+        <h2 className="text-center text-2xl mb-8 Montserrat font-thin ">
           OUR PRODUCTS 
         </h2>
-        <div className="container w-full px-4 flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl lg:ml-[10px]">
+        <div className="container px-4 flex justify-center">
+          <div className=" md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl lg:ml-[10px]">
             {/* Brand Card 1 */}
             <div
               style={{ cursor: 'pointer' }}
               onClick={handleOnAdhams}
-              className="bg-white w-full rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow flex justify-center items-center lg:ml-48"
+              className="bg-white w-full rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow flex justify-center items-center lg:ml-48  transform transition-transform duration-300 hover:scale-110"
             >
               <img
                 src={Adhams}
                 alt="Adhams"
-                className="h-24 w-full object-contain"
+                className="h-28 w-full object-contain"
               />
             </div>
 
             {/* Brand Card 2 */}
             <div
               style={{ cursor: 'pointer' }}
-              className="bg-white w-full rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow flex justify-center items-center lg:ml-48"
+              className="bg-white w-full rounded-lg shadow-md p-8 hover:shadow-lg mt-3 transition-shadow flex justify-center items-center  transform transition-transform duration-300 hover:scale-110 lg:ml-48"
             >
               <img
                 src={Simple}
                 alt="Simple DRY"
-                className="h-24 w-full object-contain"
+                className="h-28 w-full object-contain"
               />
             </div>
           </div>
         </div>
       </div>
+            <section className="py-16 mt-3 px-4 md:px-8 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          Design Your Vision, Inside and Out?
+          </h2>
+          <p className="text-xl mb-8">
+          Discover the Difference Today!
+          </p>
+          <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Get in Touch
+          </button>
+        </div>
+      </section>
       <Footer />
     </div>
   );

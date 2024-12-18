@@ -6,4 +6,18 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  @keyframes slowZoomOut {
+    from {
+      transform: scale(1.1); /* Start slightly zoomed in */
+    }
+    to {
+      transform: scale(1); /* Gradually zoom out to normal */
+    }
+  }
+  
+  .slow-zoom-out {
+    animation: slowZoomOut 10s ease-out infinite; /* 10s for slow zoom-out */
+  }
+  
   

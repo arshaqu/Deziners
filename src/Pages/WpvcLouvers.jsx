@@ -48,7 +48,7 @@ const ImageZoomModal = ({ image, alt, productName, isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={onClose}
         >
-            <div className="relative w-full max-w-2xl bg-gray-100 rounded-lg shadow-lg p-6">
+            <div style={{backgroundColor:'#d1bda5'}} className="relative w-full max-w-2xl rounded-lg shadow-lg p-6">
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-black bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-300 transition-opacity"
@@ -58,10 +58,10 @@ const ImageZoomModal = ({ image, alt, productName, isOpen, onClose }) => {
                 <img
                     src={image}
                     alt={alt}
-                    className="w-full h-auto max-h-[75vh] object-contain rounded-md border-4 border-gray-400 mb-4"
+                    className="w-full h-auto max-h-[75vh] object-contain rounded-md border-4 border-gray-100 mb-4"
                     onClick={(e) => e.stopPropagation()}
                 />
-                <div className="text-center text-lg font-semibold text-gray-700">
+                <div style={{color:'white'}} className="text-center text-lg font-semibold  text-gray-100">
                     {productName}
                 </div>
             </div>
@@ -193,7 +193,7 @@ function WpvcLouvers() {
                 </div>
             </div>
 
-            <div style={{ marginTop: '-45px' }} className="min-h-screen bg-gray-800">
+            <div style={{ marginTop: '-45px',backgroundColor:'#d1bda5' }} className="min-h-screen ">
                 {/* Categories Section */}
                 <div className="max-w-4xl mx-auto px-8 md:px-12 py-6 montserrat">
                     <h1 style={{fontSize:'35px'}} className='text-center text-white'>CATEGORIES</h1>
@@ -217,7 +217,7 @@ function WpvcLouvers() {
                 </div>
 
                 {/* Product Sections */}
-                <div className="max-w-7xl mx-auto px-4 py-8 bg-gray-800">
+                <div className="max-w-7xl mx-auto px-4 py-8 ">
                     {productSections.map((section) => (
                         <div key={section.id} id={section.id} className="mb-12">
                             <div
